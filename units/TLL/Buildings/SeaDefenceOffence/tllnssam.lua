@@ -12,6 +12,9 @@ return {
 		canstop = 1,
 		category = "ALL UNDERWATER SURFACE",
 		corpse = "dead",
+		collisionvolumeoffsets = "0 -5 0",
+		collisionvolumescales = "40 50 40",
+		collisionvolumetype = "CylY",
 		defaultmissiontype = "GUARD_NOMOVE",
 		description = "Floating SAM Tower",
 		energyuse = 12,
@@ -125,7 +128,7 @@ return {
 				impulsefactor = 0.123,
 				metalpershot = 0,
 				model = "weapon_missile.s3o",
-				name = "AA2Missile",
+				name = "AA Missile",
 				noselfdamage = true,
 				proximitypriority = 1,
 				range = 850,
@@ -136,7 +139,7 @@ return {
 				soundhitwetvolume = 0.6,
 				soundstart = "packolau",
 				soundtrigger = true,
-				startvelocity = 600,
+				startvelocity = 900,
 				texture1 = "null",
 				texture2 = "armsmoketrail",
 				texture3 = "null",
@@ -145,7 +148,7 @@ return {
 				tracks = true,
 				turnrate = 68000,
 				turret = true,
-				weaponacceleration = 200,
+				weaponacceleration = 300,
 				weapontimer = 2,
 				weapontype = "MissileLauncher",
 				weaponvelocity = 1200,
@@ -159,7 +162,7 @@ return {
 		},
 		weapons = {
 			[1] = {
-				badtargetcategory = "MINOR MAJOR", --Ground AA
+				badtargetcategory = "MINOR MAJOR FIGHTER", --Ground AA
 				def = "PACKO_MISSILE",
 				onlytargetcategory = "VTOL",
 			},

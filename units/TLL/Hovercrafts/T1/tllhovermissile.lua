@@ -121,6 +121,7 @@ return {
 				burst = 3,
 				burstrate = 0.2,
 				canattackground = false,
+				cegtag = "Tll_Def_AA_Rocket",
 				craterareaofeffect = 0,
 				craterboost = 0,
 				cratermult = 0,
@@ -158,7 +159,7 @@ return {
 		},
 		weapons = {
 			[1] = {
-				badtargetcategory = "MINOR MAJOR", --Ground AA
+				badtargetcategory = "MINOR MAJOR FIGHTER", --Ground AA
 				def = "COREAH_WEAPON",
 				onlytargetcategory = "VTOL",
 			},

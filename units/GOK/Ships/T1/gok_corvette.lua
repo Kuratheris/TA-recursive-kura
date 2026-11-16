@@ -4,8 +4,8 @@ return {
 		airsightdistance = 775,
 		brakerate = 0.33,
 		buildangle = 16384,
-		buildcostenergy = 2493,
-		buildcostmetal = 306,
+		buildcostenergy = 2490,
+		buildcostmetal = 305,
 		builder = false,
 		buildpic = "gok_corvette.dds",
 		buildtime = 6000,
@@ -14,7 +14,7 @@ return {
 		canmove = true,
 		canpatrol = true,
 		canstop = 1,
-		category = "ALL LARGE MOBILE SURFACE UNDERWATER",
+		category = "ALL MEDIUM MOBILE SURFACE UNDERWATER",
 		corpse = "dead",
 		defaultmissiontype = "Standby",
 		description = "Anti-Air Corvette",
@@ -197,12 +197,12 @@ return {
 		},
 		weapons = {
 			[1] = {
-				badtargetcategory = "MINOR MAJOR", --Ground AA
+				badtargetcategory = "MINOR MAJOR FIGHTER", --Ground AA
 				def = "GOK_RL",
 				onlytargetcategory = "VTOL",
 			},
 			[2] = {
-				badtargetcategory = "MINOR MAJOR", --Ground AA
+				badtargetcategory = "MINOR MAJOR FIGHTER", --Ground AA
 				def = "GOK_AA_MISSILE",
 				onlytargetcategory = "VTOL",
 			},

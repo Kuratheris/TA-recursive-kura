@@ -141,6 +141,7 @@ return {
 					light_radius_mult = 1.2,
 				},
 				damage = {
+					commanders = 180,
 					default = 1800,
 					subs = 5,
 				},
@@ -156,7 +157,6 @@ return {
 				flighttime = 2,
 				impulseboost = 0.123,
 				impulsefactor = 0.123,
-				metalpershot = 0,
 				model = "weapon_missile.s3o",
 				name = "Missiles",
 				noselfdamage = true,
@@ -173,7 +173,7 @@ return {
 				texture3 = "null",
 				texture4 = "null",
 				tolerance = 90000,
-				tracks = false,
+				tracks = true,
 				turnrate = 50000,
 				turret = true,
 				weaponacceleration = 200,
@@ -182,6 +182,7 @@ return {
 				weaponvelocity = 1200,
 				damage = {
 					areoship = 20,
+					commanders = 0.5,
 					default = 5,
 					air = 80,
 				},

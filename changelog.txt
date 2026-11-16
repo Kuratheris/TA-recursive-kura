@@ -1,4 +1,97 @@
- 4.9 => 4.95
+ 5.00 => 5.01
+2026-08-11
+
+End Hallowwen
+
+Improvment :
+* Rework Defiler
+* Add T1 Sea Structures for Rumad (Sea ship and hover in construction)
+
+Balance :
+* Corcan : Decrease damage and increase range
+* Defiler : Delete Plasma Gun by Beam. Increase damage. Increase cost. Decrease AA damge. Decrease Speed.
+
+Fix :
+* Repair model : Corbt, Corspun, tllloki
+* Repair All Depthcharge Launcher
+
+4.99 => 5.00
+2026-18-10
+
+Improvment :
+* Add Terraphorming
+* Add T3 Gok Hover Long Range
+* Add T2 Sniper Gok
+* Add T2 Assault Heavy Hovercraft Gok
+* T6 Core unit can be constructed by T5 constructor. Unit restricted at 1
+* T6 Arm unit can be constructed by T5 constructor. Unit restricted at 1
+* T6 TLL unit can be constructed by T5 constructor. Unit restricted at 2
+* Add new constructor vehicle engineer gok model
+* Add new model for TLL naval Obliterator
+
+Balance :
+* Air Gunship damage / 10 vs Commander
+* Gok Rocket T1 Turret / T2 Blackcoconut : reduce damage by 25%.
+* Tesla Tank TLL T3 : Reduce cost (5K=>3.7K), speed (1.7=>1.5), damage /s (700=>500) and range (800=>700)
+
+4.98 => 4.99
+2026-01-28
+
+Improvment :
+* Rework T3 Turret Obliterator TLL Model and Balance
+* Rework Core T4 Hover Artillery Model
+
+Balance :
+* Rework Tlldischarge T2 JetPack Kbot : Delete Bomb and decrease cost by 25%
+
+4.97 => 4.98
+2026-01-11
+
+AA Balance in test :
+* Ground AA, target priority only bombers / transporters
+* Air Fighter target priority fighter / bombers / transporters
+
+Balance :
+* Reduce Range for Rumad Aeroship main gun : 2000->1800
+
+Improvment :
+* Rework T4 Artillery Core Hover Model
+* Try to fix T3 Veh Talon Production Lab. No perfect with Abaddon units.
+
+
+Xmas is ending !
+
+ 4.96 => 4.97
+2025-12-19
+
+Xmas is comming !
+
+Improvment :
+* Add First T7 Deus unit : Gok Dark Deus (build by T5 Gok Builder). Restricted unit : 1.
+* Add All-Terrain T2 Capture Spider for Rumad
+* Add T5 Dark Archonte for Gok (Morph from Asmodee)
+* Add Back Gok Kadesh. Morph from Ifrit Flamer T3 Kbot. Kadesh reworked and is now T4
+
+4.95 => 4.96
+2025-12-07
+
+Improvment :
+
+* Add Rapid T2 Kbot for Rumad
+* Add T5 Air Carrier for Arm / Core with Jammer
+* Add Gok Gates T3/T4
+* Add TLL NeoBahomet (morph from Bahamut)
+* TLL Tyranosaurus morph from Colossus now
+
+Balance :
+
+* Talon MCV & Bahamut : adjust ranges (range 2250->2000)
+
+Next Work Comming :
+
+* T5 Shielded Walker for Gok (Nice Model)
+
+4.9 => 4.95
 2025-11-02
 
 Halloween event is over!
@@ -1427,7 +1520,7 @@ Fix :
 
 Balance :
  - Tll Lizard : Decrease speed 2.2 => 1.7. Decrease dmg/s 180=>170. Deacrease HP 1125=>1095
- - T2&T3 Tll tllobliterator : Decrease damage by 20%
+ - T2&T3 Tll tll_obliterator1 : Decrease damage by 20%
  - Decrease Xp 50% for all T1 ground AA morph into T2
  - Tllroaster : Decrease speed 1.5 => 1.35. Decrease spray lighting damage 200=>170 / shot. Increase metalcost 1535 => 1635
 

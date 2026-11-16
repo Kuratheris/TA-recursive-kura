@@ -2,7 +2,7 @@ return {
 	tllmcv = {
 		acceleration = 0.005,
 		brakerate = 0.18,
-		buildcostenergy = 1285187,
+		buildcostenergy = 1285000,
 		buildcostmetal = 119475,
 		builder = false,
 		buildpic = "tllmcv.dds",
@@ -30,7 +30,7 @@ return {
 		losemitheight = 145,
 		maneuverleashlength = 640,
 		mass = 119475,
-		maxdamage = 153000,
+		maxdamage = 143000,
 		maxslope = 12,
 		maxvelocity = 1,
 		maxwaterdepth = 12,

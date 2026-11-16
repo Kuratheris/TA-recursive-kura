@@ -13,6 +13,9 @@ return {
 		canstop = 1,
 		category = "ALL SURFACE UNDERWATER",
 		corpse = "dead",
+		collisionvolumeoffsets = "0 -5 0",
+		collisionvolumescales = "40 40 40",
+		collisionvolumetype = "CylY",
 		defaultmissiontype = "GUARD_NOMOVE",
 		description = "Anti-Air Flak Gun - Naval Series",
 		energyuse = 0,
@@ -139,7 +142,7 @@ return {
 		},
 		weapons = {
 			[1] = {
-				badtargetcategory = "MINOR MAJOR", --Ground AA
+				badtargetcategory = "MINOR MAJOR FIGHTER", --Ground AA
 				def = "TLLFLAK_GUN",
 				onlytargetcategory = "VTOL",
 			},

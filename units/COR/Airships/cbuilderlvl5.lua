@@ -69,6 +69,7 @@ return {
 			[13] = "corbuzz1",
 			[14] = "corflu",
 			[15] = "corlilith", -- reenabled
+			[16] = "core_core",
 		},
 		customparams = {
 			buildpic = "cbuilderlvl5.dds",

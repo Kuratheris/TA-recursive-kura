@@ -124,6 +124,8 @@ local econUnitDefIDs = { --better to hardcode these since its complicated to pic
   UnitDefNames.rumad_geo_mini.id,
   UnitDefNames.rumad_geo.id,
   UnitDefNames.rumad_mohogeo.id,
+  UnitDefNames.rumad_tide.id,
+  UnitDefNames.rumad_tide1.id,
 
 	--Metal Makers
 	UnitDefNames.armmakr.id,
@@ -163,6 +165,7 @@ local econUnitDefIDs = { --better to hardcode these since its complicated to pic
   UnitDefNames.rumad_metalmakerlvl1.id,
   UnitDefNames.rumad_metalmakerlvl2.id,
   UnitDefNames.rumad_metalmakerlvl3.id,
+  UnitDefNames.rumad_fmetalmakerlvl1.id,
 }
 
 

@@ -176,6 +176,7 @@ gok_satan = true,
 gok_slanesh = true,
 gok_antichrist = true,
 gok_archon = true,
+gok_darkarchonte = true,
 --Rumad
 rumad_king1 = true,
 rumad_king2 = true,
@@ -259,20 +260,20 @@ local function AddUnit(unitID, unitDefID)
 		unitData.needsUpdate = false
 	end
 
-	shieldUnits.Add(unitID, unitData)
+	IterableMap.Add(shieldUnits, unitID, unitData)
 
 	local _, fullview = spGetSpectatingState()
 	UpdateVisibility(unitID, unitData, fullview, true)
 end
 
 local function RemoveUnit(unitID)
-	local unitData = shieldUnits.Get(unitID)
+	local unitData = IterableMap.Get(shieldUnits, unitID)
 	if unitData then
 		for i = 1, #unitData.fxTable do
 			local fxID = unitData.fxTable[i]
 			Lups.RemoveParticles(fxID)
 		end
-		shieldUnits.Remove(unitID)
+		IterableMap.Remove(shieldUnits, unitID)
 	end
 end
 
@@ -363,7 +364,7 @@ local DECAY_FACTOR = 0.1
 local MIN_DAMAGE = 1
 
 local function GetShieldHitPositions(unitID)
-	local unitData = shieldUnits.Get(unitID)
+	local unitData = IterableMap.Get(shieldUnits, unitID)
 	return (((unitData and unitData.hitData) and unitData.hitData) or nil)
 end
 
@@ -403,7 +404,7 @@ local function ProcessHitTable(unitData, gameFrame)
 end
 
 local function AddShieldHitData(_, hitFrame, unitID, dmg, dx, dy, dz)
-	local unitData = shieldUnits.Get(unitID)
+	local unitData = IterableMap.Get(shieldUnits, unitID)
 	if unitData and unitData.hitData then
 		--Spring.Echo(hitFrame, unitID, dmg)
 		local rdx, rdy, rdz = dx - unitData.shieldPos[1], dy - unitData.shieldPos[2], dz - unitData.shieldPos[3]
@@ -428,7 +429,7 @@ function gadget:UnitFinished(unitID, unitDefID, unitTeam)
 end
 
 function gadget:UnitTaken(unitID, unitDefID, newTeam, oldTeam)
-	local unitData = shieldUnits.Get(unitID)
+	local unitData = IterableMap.Get(shieldUnits, unitID)
 	if unitData then
 		unitData.allyTeamID = Spring.GetUnitAllyTeam(unitID)
 	end
@@ -443,7 +444,7 @@ function gadget:CommandNotify(id, params, options)
 		local selectedUnit = Spring.GetSelectedUnits()
 		if #selectedUnit == 1 then
 			local cmdunitID = selectedUnit[1]
-			local unitData = shieldUnits.Get(cmdunitID)
+			local unitData = IterableMap.Get(shieldUnits, cmdunitID)
 			if unitData and ShieldUnits[cmdunitID] then
 				if params[1] == 0 then
 					RemoveUnit(cmdunitID)
@@ -461,7 +462,7 @@ function gadget:CommandNotify(id, params, options)
 end
 
 function gadget:UnitStunned(unitID, unitDefID, unitTeam, stunned)
-  local unitData = shieldUnits.Get(unitID)
+  local unitData = IterableMap.Get(shieldUnits, unitID)
   if stunned then
     if unitData then
 RemoveUnit(unitID)
@@ -482,7 +483,7 @@ function gadget:GameFrame(n)
 	--]]
 	if highEnoughQuality and hitUpdateNeeded and (n % HIT_UPDATE_PERIOD == 0) then
 		hitUpdateNeeded = false
-		for unitID, unitData in shieldUnits.Iterator() do
+		for unitID, unitData in IterableMap.Iterator(shieldUnits) do
 			if unitData and unitData.hitData then
 				--Spring.Echo(n, unitID, unitData.unitID)
 				local phtRes = ProcessHitTable(unitData, n)
@@ -493,7 +494,7 @@ function gadget:GameFrame(n)
 
 	if n % LOS_UPDATE_PERIOD == 0 then
 		local _, fullview = spGetSpectatingState()
-		for unitID, unitData in shieldUnits.Iterator() do
+		for unitID, unitData in IterableMap.Iterator(shieldUnits) do
 			UpdateVisibility(unitID, unitData, fullview)
 		end
 	end
