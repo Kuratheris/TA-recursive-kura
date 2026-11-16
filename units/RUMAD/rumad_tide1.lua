@@ -41,7 +41,7 @@ return {
 		turnrate = 0,
 		unitname = "rumad_tide1",
 		waterline = 5,
-		yardmap = "wwwwwwwww",
+		yardmap = "wwwwwwwwwwwwwwwwwwww",
 		customparams = {
 			buildpic = "rumad_tide1.dds",
 			energymultiplier = 3.25,
