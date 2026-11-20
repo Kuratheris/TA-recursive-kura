@@ -24,10 +24,10 @@ local cbackground, cborder, cbuttonbackground = include("Configs/ui_config.lua")
 
 local buttonTexture	= LUAUI_DIRNAME.."Images/button.png"
 local oldUnitpicsDir = LUAUI_DIRNAME.."Images/oldunitpics/"
-local CMD_MORPH = 31410
-local CMD_MORPH_STOP = 32410
+local CMD_MORPH = 41410
+local CMD_MORPH_STOP = 43410
 local CMD_STOCKPILE = CMD.STOCKPILE
-local MAX_MORPH = 250
+local MAX_MORPH = 1250
 
 local textureColorDisabled = {0.45,0.45,0.45,0.98}
 local textureColorOrderButton = {1,1,1,0.95}

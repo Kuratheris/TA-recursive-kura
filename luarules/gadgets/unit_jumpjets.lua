@@ -33,7 +33,7 @@ Spring.SetGameRulesParam("jumpJets",1)
 --
 
 local CMD_JUMP = 38521
-local CMD_MORPH = 31410
+local CMD_MORPH = 41410
 
 local Spring    = Spring
 local MoveCtrl  = Spring.MoveCtrl

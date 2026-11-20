@@ -47,8 +47,8 @@ local GL_GREATER = GL.GREATER
 local morphDefs = VFS.Include('LuaRules/Configs/morph_defs_techa.lua', nil, VFS.RAW_FIRST)
 local morphRanks ={}
 
-local CMD_MORPH = 31410
-local MAX_MORPH = 250 -- ATM its 173
+local CMD_MORPH = 41410
+local MAX_MORPH = 1250 -- ATM its 173
 
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------

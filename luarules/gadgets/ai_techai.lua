@@ -93,7 +93,7 @@ local CMD_DGUN        = CMD.DGUN
 local CMD_GUARD       = CMD.GUARD
 local CMD_STOP        = CMD.STOP
 local CMD_ONOFF       = CMD.ONOFF or 27
-local CMD_MORPH       = 31410 -- Base generic morph command ID from unit_morph.lua
+local CMD_MORPH       = 41410 -- Base generic morph command ID from unit_morph.lua
 
 local MAP_SIZE_X = Game.mapSizeX
 local MAP_SIZE_Z = Game.mapSizeZ

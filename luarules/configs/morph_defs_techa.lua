@@ -1,18 +1,18 @@
 --[[   Morph Definition File
 
 Morph parameters description
-local morphDefs = {				--beginig of morphDefs
-	unitname = {				--unit being morphed
+local morphDefs = {			--beginig of morphDefs
+	unitname = {			--unit being morphed
 		into = 'newunitname',		--unit in that will morphing unit morph into
-		time = 10,				--time required to complete morph process
+		time = 10,			--time required to complete morph process
 		require = 'requnitname',	--unit requnitname must be present in team for morphing to be enabled
-		metal = 10,				--required metal for morphing process     note: if you skip M and/or E costs morph costs the
-		energy = 10,			--required energy for morphing process          difference in costs between unitname and newunitname
-		xp = 0.07,				--required experience for morphing process (will be deduced from unit xp after morph)
-		rank = 1,				--required unit rank for morphing to be enabled
-		tech = 2,				--required tech level of a team for morphing to be enabled (1,2,3), if not specified, morph doesn't require tech
+		metal = 10,			--required metal for morphing process     note: if you skip M and/or E costs morph costs the
+		energy = 10,		--required energy for morphing process          difference in costs between unitname and newunitname
+		xp = 0.07,			--required experience for morphing process (will be deduced from unit xp after morph)
+		rank = 1,			--required unit rank for morphing to be enabled
+		tech = 2,			--required tech level of a team for morphing to be enabled (1,2,3), if not specified, morph doesn't require tech
 	},
-}							--end of morphDefs
+}					--end of morphDefs
 --]]
 
 local devolution = (-1 > 0)
@@ -24,11 +24,11 @@ local morphDefs = {
 	},
 	armcom1 = {
 		into = 'armcom2',
-    time = 90,
+		time = 90,
 	},
 	armcom2 = {
 		into = 'armcom3',
-    time = 180,
+		time = 180,
 	},
 	talon_com = {
 		into = 'talon_com1',
@@ -36,11 +36,11 @@ local morphDefs = {
 	},
 	talon_com1 = {
 		into = 'talon_com2',
-    time = 90,
+		time = 90,
 	},
 	talon_com2 = {
 		into = 'talon_com3',
-    time = 180,
+		time = 180,
 	},
 	gok_com = {
 		into = 'gok_com1',
@@ -60,7 +60,7 @@ local morphDefs = {
 	},
 	corcom1 = {
 		into = 'corcom2',
-    time = 90,
+		time = 90,
 	},
 	corcom2 = {
 		into = 'corcom3',
@@ -72,7 +72,7 @@ local morphDefs = {
 	},
 	tllcom1 = {
 		into = 'tllcom2',
-    time = 90,
+		time = 90,
 	},
 	tllcom2 = {
 		into = 'tllcom3',
@@ -164,14 +164,14 @@ local morphDefs = {
 	},
 	armgeo = {
 		{
-				into = 'amgeo',
-				time = 120,
-				tech = 1,
+		into = 'amgeo',
+		time = 120,
+		tech = 1,
 		},
 	  {
-				into = 'armgmm',
-				time = 60,
-				tech = 1,
+		into = 'armgmm',
+		time = 60,
+		tech = 1,
 		},
 	},
 	armgmm = {
@@ -181,14 +181,14 @@ local morphDefs = {
 	},
 	talon_geo = {
 		{
-			into = 'talon_mohogeo',
-			time = 120,
-			tech = 1,
+		into = 'talon_mohogeo',
+		time = 120,
+		tech = 1,
 		},
 		{
-				into = 'talon_pyroclastic',
-					time = 90,
-					tech = 1,
+		into = 'talon_pyroclastic',
+		time = 90,
+		tech = 1,
 		},
 	},
 	talon_mohogeo = {
@@ -197,15 +197,15 @@ local morphDefs = {
 		tech = 2,
 	},
 	corgeo = {
-    {
-				into = 'cmgeo',
-		  		time = 120,
-		  		tech = 1,
+		{
+		into = 'cmgeo',
+		time = 120,
+		tech = 1,
 		},
 		{
-				into = 'corbhmth',
-		  		time = 90,
-		  		tech = 1,
+		into = 'corbhmth',
+		time = 90,
+		tech = 1,
 		},
 	},
 	corbhmth = {
@@ -225,14 +225,14 @@ local morphDefs = {
 	},
 	tllgeo = {
 		{
-			into = 'tllmohogeo',
-			time = 120,
-			tech = 1,
+		into = 'tllmohogeo',
+		time = 120,
+		tech = 1,
 		},
 		{
-			into = 'tllgeo_armored',
-			time = 90,
-			tech = 1,
+		into = 'tllgeo_armored',
+		time = 90,
+		tech = 1,
 		},
 	},
 	tllmohogeo = {
@@ -241,19 +241,19 @@ local morphDefs = {
 		tech = 2,
 	},
 	armgeo_mini = {
-    into = 'armgeo',
+		into = 'armgeo',
 		time = 30,
 	},
 	corgeo_mini = {
-    into = 'corgeo',
+		into = 'corgeo',
 		time = 30,
 	},
 	tllgeo_mini = {
-    into = 'tllgeo',
+		into = 'tllgeo',
 		time = 30,
 	},
 	talon_geo_mini = {
-    into = 'talon_geo',
+		into = 'talon_geo',
 		time = 30,
 	},
 	gok_geo_mini = {
@@ -751,12 +751,12 @@ local morphDefs = {
 	},
 	gok_dome = {
 		{
-			into = 'gok_lab',
-			time = 10,
+		into = 'gok_lab',
+		time = 10,
 		},
 		{
-			into = 'gok_dome1',
-			time = 45,
+		into = 'gok_dome1',
+		time = 45,
 		},
 	},
 	gok_alab = {
@@ -769,32 +769,2876 @@ local morphDefs = {
 	},
 	tllnaja = {
 		{
-			into = 'tlldemon',
-			time = 10,
+		into = 'tlldemon',
+		time = 10,
 		},
 		{
-			into = 'tllchameleons',
-			time = 10,
+		into = 'tllchameleons',
+		time = 10,
 		},
 	},
 	tlldemon = {
 		{
-			into = 'tllnaja',
-			time = 10,
+		into = 'tllnaja',
+		time = 10,
 		},
 		{
-			into = 'tllchameleons',
-			time = 10,
+		into = 'tllchameleons',
+		time = 10,
 		},
 	},
 	tllchameleons = {
 		{
-			into = 'tllnaja',
-			time = 10,
+		into = 'tllnaja',
+		time = 10,
 		},
 		{
-			into = 'tlldemon',
-			time = 10,
+		into = 'tlldemon',
+		time = 10,
+		},
+	},
+	----Kura added
+
+	--ARM Laser
+	armllt = {
+		{
+		into = 'arm_beamer',
+		time = 15,
+		xp = 0.50,
+		},
+	},
+	arm_beamer = {
+		{
+		into = 'armhlt',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armhlt = {
+		{
+		into = 'armanni',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armanni = {
+		{
+		into = 'armanni1',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	armfllt = {
+		{
+		into = 'armfhlt',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+
+	--Claw > Pit Bull
+	armclaw = {
+		{
+		into = 'armpb',
+		time = 15,
+		xp = 0.50,
+		},
+	},
+
+	--ARM Artillery
+	armguard = {
+		{
+		into = 'armamb',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+	armbrtha2 = {
+		{
+		into = 'armbrtha',
+		time = 30,
+		xp = 1.00,
+		},
+		{
+		into = 'arm_emp_lrpt',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armbrtha = {
+		{
+		into = 'armvulc',
+		time = 30,
+		xp = 1.00,
+		},
+		{
+		into = 'armbrtha1',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armvulc = {
+		{
+		into = 'armvulc2',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armvulc2 = {
+		{
+		into = 'armvulc1',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	--ARM AA
+	armrl = {
+		{
+		into = 'armflak',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+	armflak = {
+		{
+		into = 'armhys',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+	armhys = {
+		{
+		into = 'arm_ucir',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+	--ARM WAA
+	armfrt = {
+		{
+		into = 'armfflak',
+		time = 20,
+		xp = 0.30,
+		},
+		{
+		into = 'armfmercury',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+
+	--ARM AA Chainsaw
+	armpack = {
+		{
+		into = 'armcir',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+	armcir = {
+		{
+		into = 'arm_ucir',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+
+	--ARM Torp
+	armtl = {
+		{
+		into = 'armatl',
+		time = 20,
+		xp = 0.30,
+		},
+	},
+
+	--ARM Bots--
+
+	--Scout Bot
+	armflea = {
+		{
+		into = 'armvader',
+		time = 30,
+		xp = 0.50,
+		},
+		{
+		into = 'armamph',
+		time = 30,
+		xp = 0.50,
+		},
+		{
+		into = 'armspider',
+		time = 30,
+		xp = 0.50,
+		},
+		{
+		into = 'armspy',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+	--Peewee
+	armpw = {
+		{
+		into = 'armwar',
+		time = 10,
+		xp = 0.30,
+		},
+		{
+		into = 'armfast',
+		time = 30,
+		xp = 0.30,
+		},
+		{
+		into = 'armmav',
+		time = 30,
+		xp = 0.30,
+		},
+		{
+		into = 'armzeus',
+		time = 30,
+		xp = 0.30,
+		},
+		{
+		into = 'armtaipan',
+		time = 30,
+		xp = 0.30,
+		},
+		{
+		into = 'armsnipe',
+		time = 30,
+		xp = 0.30,
+		},
+	},
+	armwar = {
+		{
+		into = 'armraz',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+	armraz = {
+		{
+		into = 'armraptor',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+
+	armzeus = {
+		{
+		into = 'armbanth',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+
+	armsnipe = {
+		{
+		into = 'armbanth',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+
+	armham = {
+		{
+		into = 'armvengence',
+		time = 30,
+		xp = 1.50,
+		},
+		{
+		into = 'armfboy',
+		time = 30,
+		xp = 1.00,
+		},
+		{
+		into = 'armfido',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armfboy = {
+		{
+		into = 'armshock',
+		time = 30,
+		xp = 0.50,
+		},
+	},
+
+	armmav = {
+		{
+		into = 'armmarauder',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armmarauder = {
+		{
+		into = 'armfox',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armfast = {
+		{
+		into = 'armjugg',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armjugg = {
+		{
+		into = 'armorco',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armfido = {
+		{
+		into = 'armfox',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armrock = {
+		{
+		into = 'armtarantula',
+		time = 10,
+		xp = 0.25,
+		},
+	},
+
+	armhobo = {
+		{
+		into = 'armweaver',
+		time = 60,
+		xp = 1.00,
+		},
+	},
+	armtarantula = {
+		{
+		into = 'armpraet',
+		time = 60,
+		xp = 1.00,
+		},
+	},
+
+	armweaver = {
+		{
+		into = 'arm_bagheera',
+		time = 60,
+		xp = 1.00,
+		},
+	},
+	arm_bagheera = {
+		{
+		into = 'armmygalo',
+		time = 60,
+		xp = 1.00,
+		},
+	},
+
+	--ARM VEHICLE--
+	armpincer = {
+		{
+		into = 'armcroc',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armst = {
+		{
+		into = 'armcroc',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armcroc = {
+		{
+		into = 'armrex',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armjanus = {
+		{
+		into = 'armtankanotor',
+		time = 20,
+		xp = 1.00,
+		},
+	},
+	armmh = {
+		{
+		into = 'armmerl',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armtankanotor = {
+		{
+		into = 'armmlrs',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armflash = {
+		{
+		into = 'armstump',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armstump = {
+		{
+		into = 'armbull',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armbull = {
+		{
+		into = 'armthor',
+		time = 35,
+		xp = 1.00,
+		},
+	},
+	armshellshocker = {
+		{
+		into = 'armmart',
+		time = 10,
+		xp = 1.00,
+		},
+	},
+	armmart = {
+		{
+		into = 'armmcv',
+		time = 35,
+		xp = 1.00,
+		},
+		{
+		into = 'arm_avatar',
+		time = 35,
+		xp = 1.00,
+		},
+	},
+	arm_avatar = {
+		{
+		into = 'armolympus',
+		time = 50,
+		xp = 1.00,
+		},
+	},
+	armlatnk = {
+		{
+		into = 'armchimera',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armmanni = {
+		{
+		into = 'armkrypto',
+		time = 25,
+		xp = 1.00,
+		},
+		{
+		into = 'armscpion',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+
+	--ARM HOVER--
+	armsh = {
+		{
+		into = 'armlhover',
+		time = 15,
+		xp = 1.00,
+		},
+	},
+	armlhover = {
+		{
+		into = 'armhanni',
+		time = 15,
+		xp = 1.00,
+		},
+	},
+	armhanni = {
+		{
+		into = 'armscpion',
+		time = 15,
+		xp = 1.00,
+		},
+	},
+
+	armanac = {
+		{
+		into = 'armhplasma',
+		time = 15,
+		xp = 1.00,
+		},
+	},
+	armhplasma = {
+		{
+		into = 'armtem',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+	armtem = {
+		{
+		into = 'armhcrus',
+		time = 25,
+		xp = 1.00,
+		},
+	},
+
+
+	--ARM AA
+	armjeth = {
+		{
+		into = 'armaak',
+		time = 30,
+		xp = 1.00,
+		},
+		{
+		into = 'armhuntsman',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armaak = {
+		{
+		into = 'armeak',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armhuntsman = {
+		{
+		into = 'armeak',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armsam = {
+		{
+		into = 'armyork',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armyork = {
+		{
+		into = 'armeflak',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armah = {
+		{
+		into = 'armiguana',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	--ARM Aircraft
+	armfig = {
+		{
+		into = 'armhawk',
+		time = 30,
+		--xp = 1.00,
+		},
+	},
+	armhawk = {
+		{
+		into = 'armwolf',
+		time = 30,
+		--xp = 1.00,
+		},
+	},
+	armwolf = {
+		{
+		into = 'armstratus',
+		time = 30,
+		--xp = 1.00,
+		},
+	},
+
+	armpeep = {
+		{
+		into = 'armawac',
+		time = 30,
+		},
+	},
+	armawac = {
+		{
+		into = 'armsr71',
+		time = 30,
+		},
+	},
+
+	armatlas = {
+		{
+		into = 'armdfly',
+		time = 30,
+		},
+	},
+	armdfly = {
+		{
+		into = 'armmuat',
+		time = 30,
+		},
+	},
+	armmuat = {
+		{
+		into = 'armlift',
+		time = 30,
+		},
+	},
+
+	armkam = {
+		{
+		into = 'armbrawl',
+		time = 30,
+		},
+	},
+	armbrawl = {
+		{
+		into = 'armpers',
+		time = 30,
+		},
+	},
+
+	armthund = {
+		{
+		into = 'armpnix',
+		time = 30,
+		},
+		{
+		into = 'armgripn',
+		time = 30,
+		},
+		{
+		into = 'armlance',
+		time = 30,
+		},
+	},
+	armpnix = {
+		{
+		into = 'armcybr',
+		time = 30,
+		},
+		{
+		into = 'armorion',
+		time = 30,
+		},
+		{
+		into = 'armcyclone',
+		time = 30,
+		},
+	},
+
+	--ARM Boats
+	armcarry = {
+		{
+		into = 'armucar',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	armroy = {
+		{
+		into = 'armbats',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armbats = {
+		{
+		into = 'armbc',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armbc = {
+		{
+		into = 'aseadragon',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	aseadragon = {
+		{
+		into = 'armtrmph',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armtrmph = {
+		{
+		into = 'armcentrum',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	armdecade = {
+		{
+		into = 'armcrus',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	armsub = {
+		{
+		into = 'armsubk',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armsubk = {
+		{
+		into = 'armserpent',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+	armserpent = {
+		{
+		into = 'armbsub',
+		time = 30,
+		xp = 1.00,
+		},
+		{
+		into = 'armmarlin',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	armpt = {
+		{
+		into = 'armaas',
+		time = 30,
+		xp = 1.00,
+		},
+	},
+
+	--ARM Constructors
+	armck = {
+		{
+		into = 'armack',
+		time = 30,
+		},
+		{
+		into = 'armcspider',
+		time = 30,
+		},
+	},
+	armack = {
+		{
+		into = 'armsmc',
+		time = 30,
+		},
+	},
+	armcspider = {
+		{
+		into = 'armspid',
+		time = 30,
+		},
+	},
+	--Vehicle
+	armcv = {
+		{
+		into = 'armacv',
+		time = 30,
+		},
+	},
+	armacv = {
+		{
+		into = 'armecv',
+		time = 30,
+		},
+	},
+	--Aircraft
+	armca = {
+		{
+		into = 'armaca',
+		time = 30,
+		},
+	},
+	armaca = {
+		{
+		into = 'armeca',
+		time = 30,
+		},
+	},
+	--Hover
+	armch = {
+		{
+		into = 'armach',
+		time = 30,
+		},
+	},
+	armach = {
+		{
+		into = 'armecv',
+		time = 30,
+		},
+	},
+	--Boat
+	armcs = {
+		{
+		into = 'armacsub',
+		time = 30,
+		},
+	},
+	armacsub = {
+		{
+		into = 'armecs',
+		time = 30,
+		},
+	},
+	armecs = {
+		{
+		into = 'armuch',
+		time = 30,
+		},
+	},
+
+	--ARM Radar
+	armrad = {
+		{
+		into = 'armarad',
+		time = 30,
+		},
+	},
+	armarad = {
+		{
+		into = 'armurad',
+		time = 30,
+		},
+	},
+	--ARM Jam
+	armjamt = {
+		{
+		into = 'armveil',
+		time = 30,
+		},
+	},
+	armveil = {
+		{
+		into = 'armomni',
+		time = 30,
+		},
+	},
+	--ARM Sonar
+	armsonar = {
+		{
+		into = 'armason',
+		time = 30,
+		},
+	},
+
+
+
+	--CORE CrBot
+	corck = {
+		{
+		into = 'corack',
+		time = 30,
+		},
+		{
+		into = 'corct',
+		time = 30,
+		},
+	},
+	corack = {
+		{
+		into = 'corpinchy',
+		time = 30,
+		},
+	},
+	corct = {
+		{
+		into = 'corpinchy',
+		time = 30,
+		},
+	},
+	corpinchy = {
+		{
+		into = 'corcrab',
+		time = 30,
+		},
+	},
+	--CORE CrVehicle
+	corcv = {
+		{
+		into = 'coracv',
+		time = 30,
+		},
+	},
+	coracv = {
+		{
+		into = 'corecv',
+		time = 30,
+		},
+	},
+	--CORE CrPlane
+	corca = {
+		{
+		into = 'coraca',
+		time = 30,
+		},
+	},
+	coraca = {
+		{
+		into = 'coreca',
+		time = 30,
+		},
+	},
+	--CORE CrHover
+	corch = {
+		{
+		into = 'corach',
+		time = 30,
+		},
+	},
+	corach = {
+		{
+		into = 'coruch',
+		time = 30,
+		},
+	},
+
+	--CORE Infantry
+	corak = {
+		{
+		into = 'corprot',
+		time = 30,
+		},
+		{
+		into = 'corgladiator',
+		time = 30,
+		},
+		{
+		into = 'corpyro',
+		time = 30,
+		},
+		{
+		into = 'corkrogtar',
+		time = 30,
+		},
+		{
+		into = 'coramph',
+		time = 30,
+		},
+	},
+
+	corprot = {
+		{
+		into = 'cortroman',
+		time = 30,
+		},
+	},
+	cortroman = {
+		{
+		into = 'corkrog',
+		time = 30,
+		},
+	},
+
+	corgladiator = {
+		{
+		into = 'corcan',
+		time = 30,
+		},
+	},
+	corcan = {
+		{
+		into = 'corsumo',
+		time = 30,
+		},
+	},
+	corsumo = {
+		{
+		into = 'corgorg',
+		time = 30,
+		},
+	},
+
+	corpyro = {
+		{
+		into = 'coreavalanche',
+		time = 30,
+		},
+	},
+
+	corkrogtar = {
+		{
+		into = 'corgor',
+		time = 30,
+		},
+	},
+	corgor = {
+		{
+		into = 'corkrog',
+		time = 30,
+		},
+	},
+	--CORE Cannon Bots
+	corthud =	{
+		{
+		into = 'cormort',
+		time = 30,
+		},
+		{
+		into = 'cormenacer',
+		time = 30,
+		},
+	},
+	cormort = {
+		{
+		into = 'corshiva',
+		time = 30,
+		},
+	},
+	core_riptide = {
+		{
+		into = 'core_turbulence',
+		time = 30,
+		},
+	},
+
+	cormenacer = {
+		{
+		into = 'corhaboob',
+		time = 30,
+		},
+		{
+		into = 'core_riptide',
+		time = 30,
+		},
+	},
+	corhaboob = {
+		{
+		into = 'corejudgement',
+		time = 30,
+		},
+	},
+	corejudgement = {
+		{
+		into = 'coradamantoise',
+		time = 30,
+		},
+	},
+	--CORE AA Bots
+	corcrash = {
+		{
+		into = 'coraak',
+		time = 30,
+		},
+		{
+		into = 'coraapod',
+		time = 30,
+		},
+	},
+	coraak = {
+		{
+		into = 'coreak',
+		time = 30,
+		},
+	},
+	coraapod = {
+		{
+		into = 'cormonsta',
+		time = 30,
+		},
+	},
+	cormonsta = {
+		{
+		into = 'corpokie',
+		time = 30,
+		},
+	},
+	corpokie = {
+		{
+		into = 'cormkl',
+		time = 30,
+		},
+	},
+	--CORE Light Bots
+	corpunk = {
+		{
+		into = 'corsktl',
+		time = 30,
+		},
+		{
+		into = 'corspy',
+		time = 30,
+		},
+	},
+	corsktl = {
+		{
+		into = 'coretnt',
+		time = 30,
+		},
+	},
+	--CORE Rocket Bots
+	corstorm = {
+		{
+		into = 'corkarg',
+		time = 30,
+		},
+		{
+		into = 'corhrk',
+		time = 30,
+		},
+	},
+	corhrk = {
+		{
+		into = 'corraven',
+		time = 30,
+		},
+	},
+	--CORE Vehicles
+	corraid = {
+		{
+		into = 'correap',
+		time = 30,
+		},
+	},
+	correap = {
+		{
+		into = 'corchamp',
+		time = 30,
+		},
+	},
+	corchamp = {
+		{
+		into = 'corminotaur',
+		time = 30,
+		},
+	},
+
+	corwolv = {
+		{
+		into = 'cormart',
+		time = 30,
+		},
+	},
+	cormart = {
+		{
+		into = 'cortremor',
+		time = 30,
+		},
+	},
+	cortremor = {
+		{
+		into = 'corsiege',
+		time = 30,
+		},
+	},
+
+	corgarp = {
+		{
+		into = 'corseal',
+		time = 30,
+		},
+	},
+	corseal = {
+		{
+		into = 'cortigre',
+		time = 30,
+		},
+	},
+
+	cormist = {
+		{
+		into = 'corsent',
+		time = 30,
+		},
+	},
+	corsent = {
+		{
+		into = 'coramist',
+		time = 30,
+		},
+	},
+
+	corah = {
+		{
+		into = 'corfrog',
+		time = 30,
+		},
+	},
+
+	corgator = {
+		{
+		into = 'corabsolutor',
+		time = 30,
+		},
+	},
+
+	corsh = {
+		{
+		into = 'corhalberd',
+		time = 30,
+		},
+	},
+	corhalberd = {
+		{
+		into = 'corlhover',
+		time = 30,
+		},
+	},
+	corlhover = {
+		{
+		into = 'coradon',
+		time = 30,
+		},
+	},
+	coradon = {
+		{
+		into = 'corhflag',
+		time = 30,
+		},
+	},
+
+	corsnap = {
+		{
+		into = 'corhgol',
+		time = 30,
+		},
+	},
+	corhgol = {
+		{
+		into = 'corhcrus',
+		time = 30,
+		},
+	},
+
+	corlevlr = {
+		{
+		into = 'corgol',
+		time = 30,
+		},
+	},
+	corgol = {
+		{
+		into = 'cortigre',
+		time = 30,
+		},
+		{
+		into = 'corbt',
+		time = 30,
+		},
+	},
+
+	cormh = {
+		{
+		into = 'corvroc',
+		time = 30,
+		},
+		{
+		into = 'corbanisher',
+		time = 30,
+		},
+		{
+		into = 'coraegis',
+		time = 30,
+		},
+	},
+	--CORE Planes
+	corfink = {
+		{
+		into = 'corawac',
+		time = 30,
+		},
+	},
+
+	corbladew = {
+		{
+		into = 'corarpe',
+		time = 30,
+		},
+		{
+		into = 'corape',
+		time = 30,
+		},
+	},
+	corarpe = {
+		{
+		into = 'corcrw',
+		time = 30,
+		},
+	},
+	corape = {
+		{
+		into = 'corblackdawn',
+		time = 30,
+		},
+	},
+
+	corveng = {
+		{
+		into = 'corvamp',
+		time = 30,
+		},
+	},
+	corvamp = {
+		{
+		into = 'corshrike',
+		time = 30,
+		},
+	},
+	corshrike = {
+		{
+		into = 'corshock',
+		time = 30,
+		},
+	},
+
+	corvalk = {
+		{
+		into = 'corseahook',
+		time = 30,
+		},
+	},
+	corseahook = {
+		{
+		into = 'cormuat',
+		time = 30,
+		},
+	},
+	cormuat = {
+		{
+		into = 'corlift',
+		time = 30,
+		},
+	},
+
+	corshad = {
+		{
+		into = 'corhurc',
+		time = 30,
+		},
+		{
+		into = 'cortitan',
+		time = 30,
+		},
+	},
+	corhurc = {
+		{
+		into = 'corsbomb',
+		time = 30,
+		},
+		{
+		into = 'coreclipse',
+		time = 30,
+		},
+	},
+	--CORE Radar
+	corrad = {
+		{
+		into = 'corarad',
+		time = 30,
+		},
+	},
+	corarad = {
+		{
+		into = 'corurad',
+		time = 30,
+		},
+	},
+	--CORE Jam
+	corjamt = {
+		{
+		into = 'corshroud',
+		time = 30,
+		},
+	},
+	corshroud = {
+		{
+		into = 'coromni',
+		time = 30,
+		},
+	},
+	coromni = {
+		{
+		into = 'corujam',
+		time = 30,
+		},
+	},
+	--CORE Defense
+	cormaw = {
+		{
+		into = 'corvipe',
+		time = 30,
+		},
+	},
+	corllt = {
+		{
+		into = 'corhllt',
+		time = 30,
+		},
+	},
+	corhllt = {
+		{
+		into = 'corhlt',
+		time = 30,
+		},
+	},
+	corhlt = {
+		{
+		into = 'cordoom',
+		time = 30,
+		},
+	},
+	cordoom = {
+		{
+		into = 'cordoom1',
+		time = 30,
+		},
+	},
+
+	corpun = {
+		{
+		into = 'cortoast',
+		time = 30,
+		},
+	},
+	cortoast = {
+		{
+		into = 'corspun',
+		time = 30,
+		},
+	},
+
+	corint2 = {
+		{
+		into = 'corint',
+		time = 30,
+		},
+		{
+		into = 'core_emp_lrpt',
+		time = 30,
+		},
+	},
+	corint = {
+		{
+		into = 'corint1',
+		time = 30,
+		},
+		{
+		into = 'corbuzz',
+		time = 30,
+		},
+	},
+	corbuzz = {
+		{
+		into = 'corbuzz2',
+		time = 30,
+		},
+	},
+	corbuzz2 = {
+		{
+		into = 'corbuzz1',
+		time = 30,
+		},
+	},
+
+	corrl = {
+		{
+		into = 'corflak',
+		time = 30,
+		},
+	},
+	corflak = {
+		{
+		into = 'corpre',
+		time = 30,
+		},
+	},
+	corpre = {
+		{
+		into = 'coruflak',
+		time = 30,
+		},
+	},
+	corsam = {
+		{
+		into = 'corerad',
+		time = 30,
+		},
+	},
+	corerad = {
+		{
+		into = 'corscreamer',
+		time = 30,
+		},
+	},
+
+	corfllt = {
+		{
+		into = 'corfhlt',
+		time = 30,
+		},
+	},
+	corsonar = {
+		{
+		into = 'corason',
+		time = 30,
+		},
+	},
+	cortl = {
+		{
+		into = 'coratl',
+		time = 30,
+		},
+	},
+	corfrt = {
+		{
+		into = 'corenaa',
+		time = 30,
+		},
+		{
+		into = 'corfscreamer',
+		time = 30,
+		},
+	},
+	--CORE Boats
+	corcarry = {
+		{
+		into = 'corucar',
+		time = 30,
+		},
+	},
+
+	corroy = {
+		{
+		into = 'corbats',
+		time = 30,
+		},
+	},
+	corbats = {
+		{
+		into = 'cortyrnt',
+		time = 30,
+		},
+	},
+	cortyrnt = {
+		{
+		into = 'corurbanus',
+		time = 30,
+		},
+	},
+
+	corsub = {
+		{
+		into = 'corshark',
+		time = 30,
+		},
+	},
+	corshark = {
+		{
+		into = 'corssub',
+		time = 30,
+		},
+	},
+	corssub = {
+		{
+		into = 'corbsub',
+		time = 30,
+		},
+		{
+		into = 'coruppercut',
+		time = 30,
+		},
+	},
+
+	coresupp = {
+		{
+		into = 'corcrus',
+		time = 30,
+		},
+	},
+	corcrus = {
+		{
+		into = 'corblackhy',
+		time = 30,
+		},
+	},
+	corblackhy = {
+		{
+		into = 'corurbanus',
+		time = 30,
+		},
+	},
+
+	corpt = {
+		{
+		into = 'corarch',
+		time = 30,
+		},
+	},
+	corarch = {
+		{
+		into = 'cormship1',
+		time = 30,
+		},
+	},
+	cormship = {
+		{
+		into = 'cormship1',
+		time = 30,
+		},
+	},
+
+
+	--TLL Builders
+	tllck = {
+		{
+		into = 'tllack',
+		time = 30,
+		},
+		{
+		into = 'tllmusk',
+		time = 30,
+		},
+	},
+	tllack = {
+		{
+		into = 'tlldoc',
+		time = 30,
+		},
+	},
+	tllmusk = {
+		{
+		into = 'tlldoc',
+		time = 30,
+		},
+	},
+
+	tllcv = {
+		{
+		into = 'tllacv',
+		time = 30,
+		},
+	},
+	tllacv = {
+		{
+		into = 'tllecv',
+		time = 30,
+		},
+	},
+	tllecv = {
+		{
+		into = 'tllucv',
+		time = 30,
+		},
+	},
+	tllchover = {
+		{
+		into = 'tllach',
+		time = 30,
+		},
+	},
+
+	tllca = {
+		{
+		into = 'tllaca',
+		time = 30,
+		},
+	},
+	tllaca = {
+		{
+		into = 'tlleca',
+		time = 30,
+		},
+	},
+
+	tllcs = {
+		{
+		into = 'tllacsub',
+		time = 30,
+		},
+	},
+	tllacsub = {
+		{
+		into = 'tllecs',
+		time = 30,
+		},
+	},
+	tllecs = {
+		{
+		into = 'tllucv',
+		time = 30,
+		},
+	},
+	--TLL AA Bots
+	tllfirestarter = {
+		{
+		into = 'tllaak',
+		time = 30,
+		},
+	},
+	tllaak = {
+		{
+		into = 'tllloggerhead',
+		time = 30,
+		},
+	},
+	tllloggerhead = {
+		{
+		into = 'tlldilophosaurus',
+		time = 30,
+		},
+	},
+	--TLL Cannon Bots
+	tllpbot = {
+		{
+		into = 'tllsnakeneck',
+		time = 30,
+		},
+		{
+		into = 'tllartybot',
+		time = 30,
+		},
+	},
+	tllsnakeneck = {
+		{
+		into = 'tllhailstorm',
+		time = 30,
+		},
+	},
+	tllhailstorm = {
+		{
+		into = 'tllheavyimpact',
+		time = 30,
+		},
+	},
+	tllartybot = {
+		{
+		into = 'tllom',
+		time = 30,
+		},
+		{
+		into = 'tllmatamata',
+		time = 30,
+		},
+	},
+	tllom = {
+		{
+		into = 'tllluth',
+		time = 30,
+		},
+	},
+	tllmatamata = {
+		{
+		into = 'tllluth',
+		time = 30,
+		},
+	},
+	tllluth = {
+		{
+		into = 'tllirritator',
+		time = 30,
+		},
+	},
+	--TLL Scout
+	tllbug = {
+		{
+		into = 'tllspy',
+		time = 30,
+		},
+		{
+		into = 'tllcrawlb',
+		time = 30,
+		},
+	},
+	--TLL Infantry
+	tllprivate = {
+		{
+		into = 'tlllasbot',
+		time = 30,
+		},
+		{
+		into = 'tlltraq',
+		time = 30,
+		},
+		{
+		into = 'tllsniper',
+		time = 30,
+		},
+		{
+		into = 'tllamphibot',
+		time = 30,
+		},
+		{
+		into = 'tlldischarge',
+		time = 30,
+		},
+		{
+		into = 'tllhtml',
+		time = 30,
+		},
+	},
+	tlllasbot = {
+		{
+		into = 'tllbind',
+		time = 30,
+		},
+	},
+	tllbind = {
+		{
+		into = 'tllblind',
+		time = 30,
+		},
+	},
+	tllsniper = {
+		{
+		into = 'tllgrim',
+		time = 30,
+		},
+	},
+	tllamphibot = {
+		{
+		into = 'tlldilophosaurus',
+		time = 30,
+		},
+	},
+	tlldischarge = {
+		{
+		into = 'tllhyperion',
+		time = 30,
+		},
+	},
+	--TLL Rocket Bot
+	tllfireraiser = {
+		{
+		into = 'tllhtml',
+		time = 30,
+		},
+	},
+	tllhtml = {
+		{
+		into = 'tllsaurus',
+		time = 30,
+		},
+	},
+	--TLL Assault Bot
+	tllburner = {
+		{
+		into = 'tllblind',
+		time = 30,
+		},
+	},
+	--TLL Plasma Vehicle
+	tllhplasma = {
+		{
+		into = 'tllthumper',
+		time = 30,
+		},
+	},
+	tllthumper = {
+		{
+		into = 'tllinsulator',
+		time = 30,
+		},
+	},
+	--TLL Missile Vehicle
+	tllhoverrocket = {
+		{
+		into = 'tllconvincer',
+		time = 30,
+		},
+		{
+		into = 'tlldimetrodon',
+		time = 30,
+		},
+	},
+	tllconvincer = {
+		{
+		into = 'tllacid',
+		time = 30,
+		},
+		{
+		into = 'tlldemon',
+		time = 30,
+		},
+	},
+	tlldimetrodon = {
+		{
+		into = 'tllacid',
+		time = 30,
+		},
+		{
+		into = 'tlldemon',
+		time = 30,
+		},
+	},
+	--TLL Assault Vehicle
+	tllhovergauss = {
+		{
+		into = 'tlltelsatnk',
+		time = 30,
+		},
+	},
+	tlltelsatnk = {
+		{
+		into = 'tllmcv',
+		time = 30,
+		},
+	},
+	--TLL Scout/Paralyse
+	tllhoverlight = {
+		{
+		into = 'tllanvil',
+		time = 30,
+		},
+	},
+	tllgladius = {
+		{
+		into = 'tllanvil',
+		time = 30,
+		},
+	},
+	--TLL Hover AA
+	tllhovermissile = {
+		{
+		into = 'tllhflak',
+		time = 30,
+		},
+	},
+	tllhflak = {
+		{
+		into = 'tllmantis',
+		time = 30,
+		},
+	},
+	--TLL Vehicle AA
+	tllhoplit = {
+		{
+		into = 'tllpuncher',
+		time = 30,
+		},
+	},
+	tllpuncher = {
+		{
+		into = 'tllmantis',
+		time = 30,
+		},
+	},
+	--TLL Artillery
+	tllshaker = {
+		{
+		into = 'tllloki',
+		time = 30,
+		},
+	},
+	tllloki = {
+		{
+		into = 'tllleopard',
+		time = 30,
+		},
+	},
+	tllleopard = {
+		{
+		into = 'tllmlrpc',
+		time = 30,
+		},
+	},
+	--TLL Amph Tank
+	tllsalamander = {
+		{
+		into = 'tllcenturion',
+		time = 30,
+		},
+	},
+	tllcenturion = {
+		{
+		into = 'tllinsulator',
+		time = 30,
+		},
+	},
+	--TLL Riot Tank
+	tllriot = {
+		{
+		into = 'tlllochness',
+		time = 30,
+		},
+		{
+		into = 'tllroaster',
+		time = 30,
+		},
+	},
+	tlllochness = {
+		{
+		into = 'tllmosasaurus',
+		time = 30,
+		},
+	},
+	tllroaster = {
+		{
+		into = 'tllmosasaurus',
+		time = 30,
+		},
+	},
+	--TLL Assault Tank
+	tllares = {
+		{
+		into = 'tllariman',
+		time = 30,
+		},
+	},
+	tllariman = {
+		{
+		into = 'tllcoyote',
+		time = 30,
+		},
+	},
+	tllcoyote = {
+		{
+		into = 'tllhcrus',
+		time = 30,
+		},
+	},
+	--TLL Air Scout
+	tllprob = {
+		{
+		into = 'tllrsplane',
+		time = 30,
+		},
+	},
+	--TLL Fighter
+	tllfight = {
+		{
+		into = 'tlladvfight',
+		time = 30,
+		},
+	},
+	tlladvfight = {
+		{
+		into = 'tllshu',
+		time = 30,
+		},
+	},
+	tllshu = {
+		{
+		into = 'tllcondor',
+		time = 30,
+		},
+	},
+	--TLL Transport
+	tlltplane = {
+		{
+		into = 'tllrobber',
+		time = 30,
+		},
+	},
+	tllrobber = {
+		{
+		into = 'tllbtrans',
+		time = 30,
+		},
+	},
+	--TLL Bomber
+	tllbomber = {
+		{
+		into = 'tllabomber',
+		time = 30,
+		},
+		{
+		into = 'tlltorpp',
+		time = 30,
+		},
+	},
+	tllabomber = {
+		{
+		into = 'tllanhur',
+		time = 30,
+		},
+		{
+		into = 'tllaether',
+		time = 30,
+		},
+	},
+	--TLL Gunship
+	tll_wasp = {
+		{
+		into = 'tllcopter',
+		time = 30,
+		},
+		{
+		into = 'tllpterodactyl',
+		time = 30,
+		},
+	},
+	tllcopter = {
+		{
+		into = 'tllnuada',
+		time = 30,
+		},
+	},
+	--TLL Radar
+	tllradar = {
+		{
+		into = 'tllarad',
+		time = 30,
+		},
+	},
+	tllarad = {
+		{
+		into = 'tllurad',
+		time = 30,
+		},
+	},
+	--TLL Jam
+	tlljam = {
+		{
+		into = 'tllajam',
+		time = 30,
+		},
+	},
+	tllajam = {
+		{
+		into = 'tllomni',
+		time = 30,
+		},
+	},
+	tllomni = {
+		{
+		into = 'tllujam',
+		time = 30,
+		},
+	},
+	--TLL Lightning
+	tllllt = {
+		{
+		into = 'tllhlt',
+		time = 30,
+		},
+	},
+	tllhlt = {
+		{
+		into = 'tllpulaser',
+		time = 30,
+		},
+	},
+	tllpulaser = {
+		{
+		into = 'tllrlrpc',
+		time = 30,
+		},
+	},
+	--TLL Plasma
+	tlllbt = {
+		{
+		into = 'tllplasma',
+		time = 30,
+		},
+	},
+	--TLL LPlasma
+	tlllrpt2 = {
+		{
+		into = 'tlllrpt',
+		time = 30,
+		},
+		{
+		into = 'tll_emp_lrpt',
+		time = 30,
+		},
+	},
+	tlllrpt = {
+		{
+		into = 'tlllrpt1',
+		time = 30,
+		},
+		{
+		into = 'tll_hydre',
+		time = 30,
+		},
+	},
+	tll_hydre = {
+		{
+		into = 'tll_hydre2',
+		time = 30,
+		},
+	},
+	tll_hydre2 = {
+		{
+		into = 'tll_hydre1',
+		time = 30,
+		},
+	},
+	--TLL AA
+	tlllmt = {
+		{
+		into = 'tllflak',
+		time = 30,
+		},
+	},
+	tllflak = {
+		{
+		into = 'tlldb',
+		time = 30,
+		},
+	},
+	tlldb = {
+		{
+		into = 'tlluflak',
+		time = 30,
+		},
+	},
+	tllsam = {
+		{
+		into = 'tlltetanos',
+		time = 30,
+		},
+		{
+		into = 'tllhmt',
+		time = 30,
+		},
+	},
+	tlltetanos = {
+		{
+		into = 'tlldb',
+		time = 30,
+		},
+	},
+	--TLL Gauss
+	tll_obliterator1 = {
+		{
+		into = 'tll_obliterator2',
+		time = 30,
+		},
+	},
+	--TLL Sonar
+	tllsonar = {
+		{
+		into = 'tllasonar',
+		time = 30,
+		},
+	},
+	--TLL Floating
+	tllfllt = {
+		{
+		into = 'tllhltns',
+		time = 30,
+		},
+	},
+	tlltorp = {
+		{
+		into = 'tllatorp',
+		time = 30,
+		},
+	},
+	tllmtns = {
+		{
+		into = 'tllfflak',
+		time = 30,
+		},
+	},
+	tllnssam = {
+		{
+		into = 'tllfhmt',
+		time = 30,
+		},
+	},
+	--TLL Boats
+	tllviolator = {
+		{
+		into = 'tllequalizer',
+		time = 30,
+		},
+	},
+	tllequalizer = {
+		{
+		into = 'tllmako',
+		time = 30,
+		},
+		{
+		into = 'tllviking',
+		time = 30,
+		},
+	},
+	tllmako = {
+		{
+		into = 'tllasgard',
+		time = 30,
+		},
+	},
+	tllviking = {
+		{
+		into = 'tllasgard',
+		time = 30,
+		},
+	},
+	tllasgard = {
+		{
+		into = 'tllcaps',
+		time = 30,
+		},
+	},
+	tllcaps = {
+		{
+		into = 'tllpliosaurus',
+		time = 30,
+		},
+	},
+
+	tllplunger = {
+		{
+		into = 'tllorc',
+		time = 30,
+		},
+		{
+		into = 'tllmanta',
+		time = 30,
+		},
+	},
+	tllorc = {
+		{
+		into = 'tllswordfish',
+		time = 30,
+		},
+		{
+		into = 'tllbsub',
+		time = 30,
+		},
+	},
+	tllmanta = {
+		{
+		into = 'tllswordfish',
+		time = 30,
+		},
+		{
+		into = 'tllbsub',
+		time = 30,
+		},
+	},
+
+	tllotter = {
+		{
+		into = 'tllsting',
+		time = 30,
+		},
+	},
+
+	tllvisitor = {
+		{
+		into = 'tllhcar',
+		time = 30,
+		},
+	},
+	tllhcar = {
+		{
+		into = 'tllucar',
+		time = 30,
+		},
+	},
+	tllcarry = {
+		{
+		into = 'tllhcar',
+		time = 30,
+		},
+	},
+
+	--TALON Builders
+	talon_psyker = {
+		{
+		into = 'talon_ack',
+		time = 30,
+		},
+	},
+	talon_ack = {
+		{
+		into = 'talon_eck',
+		time = 30,
+		},
+	},
+	talon_cv = {
+		{
+		into = 'talon_acv',
+		time = 30,
+		},
+	},
+	talon_acv = {
+		{
+		into = 'talon_ech',
+		time = 30,
+		},
+	},
+	talon_ca = {
+		{
+		into = 'talon_aca',
+		time = 30,
+		},
+	},
+	talon_aca = {
+		{
+		into = 'talon_eca',
+		time = 30,
+		},
+	},
+	talon_ch = {
+		{
+		into = 'talon_ach',
+		time = 30,
+		},
+	},
+	talon_ach = {
+		{
+		into = 'talon_ech',
+		time = 30,
+		},
+	},
+	talon_ech = {
+		{
+		into = 'talon_uch',
+		time = 30,
+		},
+	},
+	--TALON Lightning Bot
+	talon_luridae = {
+		{
+		into = 'talon_scorpion',
+		time = 30,
+		},
+	},
+	talon_crusader = {
+		{
+		into = 'talon_crab',
+		time = 30,
+		},
+	},
+	--TALON Long Range Bot
+	talon_sniper = {
+		{
+		into = 'talon_collier',
+		time = 30,
+		},
+		{
+		into = 'talon_hollander',
+		time = 30,
+		},
+	},
+	--Bomb Range Bot
+	talon_sphere = {
+		{
+		into = 'talon_herison',
+		time = 30,
+		},
+	},
+	--Bomb Assault Bot
+	talon_mercenary = {
+		{
+		into = 'talon_wolf',
+		time = 30,
+		},
+	},
+	talon_wolf = {
+		{
+		into = 'talon_opal',
+		time = 30,
+		},
+		{
+		into = 'talon_berserker',
+		time = 30,
+		},
+	},
+	talon_opal = {
+		{
+		into = 'talon_talos',
+		time = 30,
+		},
+	},
+	talon_berserker = {
+		{
+		into = 'talon_talos',
+		time = 30,
+		},
+	},
+	--TALON Infantry
+	talon_infantry = {
+		{
+		into = 'talon_fdog',
+		time = 30,
+		},
+	},
+	talon_fdog = {
+		{
+		into = 'talon_boxer',
+		time = 30,
+		},
+	},
+	--TALON AA Bot
+	talon_rebel = {
+		{
+		into = 'talon_striker',
+		time = 30,
+		},
+	},
+	talon_striker = {
+		{
+		into = 'talon_eak',
+		time = 30,
+		},
+	},
+	talon_eak = {
+		{
+		into = 'talon_javelin',
+		time = 30,
+		},
+	},
+	--TALON HGravitank
+	talon_basilisk = {
+		{
+		into = 'talon_dutchman',
+		time = 30,
+		},
+	},
+	--TALON MGTank
+	talon_obsidian = {
+		{
+		into = 'talon_shieldgen',
+		time = 30,
+		},
+		{
+		into = 'talon_squarepants',
+		time = 30,
+		},
+	},
+	talon_shieldgen = {
+		{
+		into = 'talon_seth',
+		time = 30,
+		},
+	},
+	talon_squarepants = {
+		{
+		into = 'talon_azul',
+		time = 30,
+		},
+	},
+	--TALON Rocket Vehicle
+	talon_lupa = {
+		{
+		into = 'talon_november',
+		time = 30,
+		},
+		{
+		into = 'talon_thingyness',
+		time = 30,
+		},
+	},
+	talon_november = {
+		{
+		into = 'talon_armadillo',
+		time = 30,
+		},
+	},
+	talon_thingyness = {
+		{
+		into = 'talon_armadillo',
+		time = 30,
+		},
+	},
+	talon_armadillo = {
+		{
+		into = 'talon_crystal',
+		time = 30,
+		},
+	},
+	--TALON AA Vehicle
+	talon_sheatiped = {
+		{
+		into = 'talon_vanguard',
+		time = 30,
+		},
+	},
+	talon_vanguard = {
+		{
+		into = 'talon_expanse',
+		time = 30,
+		},
+	},
+	talon_cataphract = {
+		{
+		into = 'talon_hydra',
+		time = 30,
+		},
+	},
+	talon_hydra = {
+		{
+		into = 'talon_expanse',
+		time = 30,
+		},
+	},
+	--TALON LL Vehicle
+	talon_topaz = {
+		{
+		into = 'talon_jewel',
+		time = 30,
+		},
+	},
+	talon_jewel = {
+		{
+		into = 'talon_visitant',
+		time = 30,
+		},
+	},
+	talon_visitant = {
+		{
+		into = 'talon_sirius',
+		time = 30,
+		},
+	},
+	talon_snitch = {
+		{
+		into = 'talon_gorgon',
+		time = 30,
+		},
+	},
+	talon_gorgon = {
+		{
+		into = 'talon_visitant',
+		time = 30,
+		},
+	},
+	--TALON Plasma Vehicle
+	talon_salamander = {
+		{
+		into = 'talon_abaddon',
+		time = 30,
+		},
+	},
+	--TALON Artillery
+	talon_nunchuck = {
+		{
+		into = 'talon_annubis',
+		time = 30,
+		},
+	},
+	--TALON Assault Tank
+	talon_xeon = {
+		{
+		into = 'talon_carbuncle',
+		time = 30,
+		},
+	},
+	talon_carbuncle = {
+		{
+		into = 'talon_grenat',
+		time = 30,
+		},
+	},
+	--TALON Scout Plane
+	talon_recon = {
+		{
+		into = 'talon_vigilante',
+		time = 30,
+		},
+	},
+	--TALON Gunship
+	talon_drone = {
+		{
+		into = 'talon_vulture',
+		time = 30,
+		},
+	},
+	talon_vulture = {
+		{
+		into = 'talon_ceddral',
+		time = 30,
+		},
+		{
+		into = 'talon_pampa',
+		time = 30,
+		},
+	},
+	talon_ceddral = {
+		{
+		into = 'talon_pepper',
+		time = 30,
+		},
+	},
+	--[[TALON Fighter
+	talon_token = {
+		{
+		into = 'talon_echelon',
+		time = 30,
+		},
+	},]]
+	talon_echelon = {
+		{
+		into = 'talon_hornet',
+		time = 30,
+		},
+	},
+	--TALON Transport
+	talon_wyvern = {
+		{
+		into = 'talon_rukh',
+		time = 30,
+		},
+	},
+	talon_rukh = {
+		{
+		into = 'talon_tau',
+		time = 30,
+		},
+	},
+	talon_tau = {
+		{
+		into = 'talon_plutor',
+		time = 30,
+		},
+	},
+	--TALON Bomber
+	talon_token = {
+		{
+		into = 'talon_eclipse',
+		time = 30,
+		},
+		{
+		into = 'talon_trident',
+		time = 30,
+		},
+	},
+	talon_eclipse = {
+		{
+		into = 'talon_spirit',
+		time = 30,
+		},
+		{
+		into = 'talon_handgod',
+		time = 30,
+		},
+	},
+	--TALON Radar
+	talon_rad = {
+		{
+		into = 'talon_arad',
+		time = 30,
+		},
+	},
+	talon_arad = {
+		{
+		into = 'talon_urad',
+		time = 30,
+		},
+	},
+	--TALON Jam
+	talon_conspiracy = {
+		{
+		into = 'talon_conspiracy1',
+		time = 30,
+		},
+	},
+	talon_conspiracy1 = {
+		{
+		into = 'talon_conspiracy2',
+		time = 30,
+		},
+	},
+	talon_conspiracy2 = {
+		{
+		into = 'talon_talpax',
+		time = 30,
+		},
+	},
+	--TALON Laser
+	talon_llt = {
+		{
+		into = 'talon_hlt',
+		time = 30,
+		},
+	},
+	talon_hlt = {
+		{
+		into = 'talon_sprinkler',
+		time = 30,
+		},
+	},
+	--TALON Rocket
+	talon_kevlar = {
+		{
+		into = 'talon_solarwind',
+		time = 30,
+		},
+	},
+	--TALON Artillery
+	talon_painless = {
+		{
+		into = 'talon_slinger',
+		time = 30,
+		},
+	},
+	talon_slinger = {
+		{
+		into = 'talon_lrpt',
+		time = 30,
+		},
+	},
+	talon_lrpt = {
+		{
+		into = 'talon_lrpt1',
+		time = 30,
+		},
+		{
+		into = 'talon_veloute',
+		time = 30,
+		},
+	},
+	talon_veloute = {
+		{
+		into = 'talon_veloute2',
+		time = 30,
+		},
+	},
+	talon_veloute2 = {
+		{
+		into = 'talon_veloute1',
+		time = 30,
+		},
+	},
+	--TALON AA Defense
+	talon_rl = {
+		{
+		into = 'talon_cir',
+		time = 30,
+		},
+		{
+		into = 'talon_popcorn',
+		time = 30,
+		},
+	},
+	talon_cir = {
+		{
+		into = 'talon_ptr',
+		time = 30,
+		},
+	},
+	talon_popcorn = {
+		{
+		into = 'talon_popcorn1',
+		time = 30,
+		},
+	},
+	--TALON Tachyon
+	talon_blt = {
+		{
+		into = 'talon_blt1',
+		time = 30,
 		},
 	},
 }

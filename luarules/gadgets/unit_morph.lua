@@ -108,8 +108,8 @@ end
 --   30000 - 39999:  LuaRules
 --
 
-local CMD_MORPH_STOP = 32410
-local CMD_MORPH = 31410
+local CMD_MORPH_STOP = 43410
+local CMD_MORPH = 41410
 
 local floor = math.floor
 local pi = math.pi
