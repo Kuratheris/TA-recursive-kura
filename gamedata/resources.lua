@@ -122,6 +122,7 @@ local resources = {
 			"2explo='2explo.tga'",
 			redexplo='redexplo.tga',
 			purpleexplo='purpleexplo.tga',
+			riftblastcore='rift_blast_core.png',
 			blueexplo='blueexplo.tga',
 			pinkexplo='pinkexplo.tga',
 			brightblueexplo='brightblueexplo.tga',

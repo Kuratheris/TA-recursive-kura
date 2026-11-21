@@ -168,8 +168,20 @@ local Armtrails = {
 	["armcrack_lightartmissarm"] = true,
 }
 
+local spriteCannonTrailTags = {
+	trail_cannon = true,
+	trail_cannon_med = true,
+	trail_cannon_large = true,
+}
+
 -- process weapondef
 function WeaponDef_Post(wname, wd, name)
+	-- The built-in sprite streak follows the rendered shell. These CEGs leave a separate flash at the sim position.
+	if wd.weapontype == "Cannon" and (not wd.model or wd.model == "")
+			and type(wd.cegtag) == "string" and spriteCannonTrailTags[wd.cegtag:lower()] then
+		wd.cegtag = nil
+	end
+
 	if FixWeaponStats == true then
 		local lower = string.lower
 
