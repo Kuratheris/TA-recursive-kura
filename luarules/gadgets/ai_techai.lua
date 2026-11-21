@@ -65,7 +65,7 @@ local spGetUnitExperience     = Spring.GetUnitExperience
 local spGetUnitNearestEnemy   = Spring.GetUnitNearestEnemy
 local spGetUnitsInCylinder    = Spring.GetUnitsInCylinder
 local spGetCommandQueue       = Spring.GetCommandQueue
-local spGetUnitCommandCount   = Spring.GetUnitCommandCount
+local spGetUnitCommandCount   = VFS.Include('LuaRules/Utilities/GetUnitCommandCount.lua')
 local spGetFullBuildQueue     = Spring.GetFullBuildQueue
 local spGiveOrderToUnit       = Spring.GiveOrderToUnit
 local spTestBuildOrder        = Spring.TestBuildOrder
@@ -1892,7 +1892,9 @@ local function GetAITypeForTeam(teamID)
 	end
 	local luaAI = Spring.GetTeamLuaAI(teamID)
 	if luaAI and luaAI ~= "" then
-		if string.find(string.lower(luaAI), "null") then
+		local name = string.lower(luaAI)
+		-- DRD Robot teams are controlled by the DRD spawner.
+		if name:find("null", 1, true) or name:match("^robot:") then
 			return nil
 		end
 		return luaAI

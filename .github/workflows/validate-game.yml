@@ -8,6 +8,8 @@ jobs:
   validate:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    env:
+      SMOKE_MAP: Comet Catcher Redux
 
     steps:
       - name: Checkout Repo
@@ -20,6 +22,7 @@ jobs:
             p7zip-full \
             wget \
             git \
+            lua5.1 \
             libgl1 \
             libxcursor1 \
             libxrandr2 \
@@ -31,10 +34,11 @@ jobs:
             libcurl4 \
             ca-certificates
 
-      - name: Prepare spring packages directory
+      - name: Install the checked-out game
         run: |
-          mkdir -p "$HOME/.spring/packages"
-          cp -r . "$HOME/.spring/packages/TA.sdd"
+          game_dir="$HOME/.spring/games/TA-recursive.sdd"
+          mkdir -p "$game_dir"
+          git archive HEAD | tar -x -C "$game_dir"
 
       - name: Download and extract spring-headless
         run: |
@@ -47,38 +51,29 @@ jobs:
       - name: Download map using pr-downloader
         run: |
           cd recoil_engine
-          ./pr-downloader --download-map 'Techno Lands Final 17.0'
+          ./pr-downloader --download-map "$SMOKE_MAP"
 
-      - name: Run spring-headless and capture output
-        id: run_spring
+      - name: Verify the game reaches the in-game state
+        shell: bash
         run: |
+          game_name=$(lua5.1 -e 'local mod = dofile("modinfo.lua"); assert(mod.name and mod.version); print(mod.name .. " " .. mod.version)')
           cd recoil_engine
-          set +e
-          timeout 60s ./spring-headless -game 'Tech Annihilation $VERSION' -map 'Techno Lands Final 17.0' > output.log 2>&1
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          echo "Launching $game_name on $SMOKE_MAP"
+          engine_status=0
+          timeout 90s ./spring-headless -game "$game_name" -map "$SMOKE_MAP" > output.log 2>&1 || engine_status=$?
 
-      - name: Check if game loaded successfully
-        run: |
-          cd recoil_engine
-          if grep -q "Player UnnamedPlayer finished loading and is now ingame" output.log; then
-            echo "Game launched successfully and player entered game."
-            exit 0
-          else
-            echo "ERROR: Game did not reach ingame state"
-            cat output.log
+          # A headless game keeps running after startup, so timeout can be expected.
+          if [[ "$engine_status" != 0 && "$engine_status" != 124 ]]; then
+            echo "Recoil exited with status $engine_status"
+            tail -n 150 output.log
             exit 1
           fi
-      - name: Check no LUA errors
-        run: |
-          cd recoil_engine
-          if grep "Internal Lua error: Call failure" output.log; then
-            echo "Some LUA Gadget has an error in it"
+          if grep -nE 'Fatal:|Internal Lua error: Call failure|Error: Failed to load: .*\.lua' output.log; then
+            echo "Recoil reported a startup or Lua error"
             exit 1
-          else
-            if grep -E 'Error: Failed to load: [^\.]+\.lua' output.log; then
-              echo "Some LUA Gadget has an error in it"
-              exit 1
-            fi
-            exit 0
           fi
-
+          if ! grep -F "finished loading and is now ingame" output.log; then
+            echo "The game did not reach the in-game state (Recoil status $engine_status)"
+            tail -n 150 output.log
+            exit 1
+          fi

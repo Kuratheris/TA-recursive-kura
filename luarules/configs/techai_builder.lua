@@ -1,5 +1,6 @@
 -- Engine-facing builder scheduler. One shared economic snapshot per team cycle.
 local Economy = VFS.Include('LuaRules/Configs/techai_economy.lua')
+local GetUnitCommandCount = VFS.Include('LuaRules/Utilities/GetUnitCommandCount.lua')
 local M = {}
 
 function M.Create(api)
@@ -168,7 +169,7 @@ function M.Create(api)
 					for _,id in ipairs(ai.mexes) do
 						local old=metadata[S.GetUnitDefID(id)]
 						local owner=ai.mexUpgrades[id]
-						if owner and (not S.ValidUnitID(owner) or (S.GetUnitCommandCount(owner) or 0)==0) then ai.mexUpgrades[id]=nil;owner=nil end
+						if owner and (not S.ValidUnitID(owner) or (GetUnitCommandCount(owner) or 0)==0) then ai.mexUpgrades[id]=nil;owner=nil end
 						local mx,my,mz=S.GetUnitPosition(id)
 						local _,_,_,_,progress=S.GetUnitHealth(id)
 						if old and mx and not owner and old.tech<meta.tech and old.isWater==meta.isWater

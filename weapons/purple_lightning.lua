@@ -36,5 +36,15 @@ return {
 		subs = 5,
 	},
 	tracks = false,
-	}
+	},
+	rift_beam_arc = {
+		name = "Rift Beam Arc",
+		weapontype = "LightningCannon",
+		rgbcolor = "0.82 0.26 1",
+		texture1 = "strike",
+		thickness = 3,
+		duration = 0.1,
+		range = 2600,
+		damage = { default = 0 },
+	},
 }

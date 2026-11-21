@@ -61,7 +61,7 @@ if gadgetHandler:IsSyncedCode() then
 	local spGetUnitsInCylinder = Spring.GetUnitsInCylinder
 	local spSetUnitRulesParam = Spring.SetUnitRulesParam
 	local spGetUnitCommands = Spring.GetUnitCommands
-	local spGetUnitCommandCount = Spring.GetUnitCommandCount
+	local spGetUnitCommandCount = VFS.Include('LuaRules/Utilities/GetUnitCommandCount.lua')
 	local spGetUnitCurrentCommand = Spring.GetUnitCurrentCommand
 	local spGiveOrderArrayToUnitArray = Spring.GiveOrderArrayToUnitArray
 	local spGetUnitWeaponTryTarget = Spring.GetUnitWeaponTryTarget
@@ -539,7 +539,9 @@ local unitCancelTargetCmdDesc = {
 				pausedTargets[unitID] = nil
 			end
 		else
-			local activeCommandIsDgun = spGetUnitCommandCount(unitID) ~= 0 and spGetUnitCommands(unitID, 1)[1].id == CMD_DGUN
+			local commands = spGetUnitCommands(unitID, 1)
+			local command = commands and commands[1]
+			local activeCommandIsDgun = command and command.id == CMD_DGUN
 			if pausedTargets[unitID] and not activeCommandIsDgun then
 				if waitingForInsertRemoval[unitID] then
 					waitingForInsertRemoval[unitID] = nil
@@ -553,7 +555,7 @@ local unitCancelTargetCmdDesc = {
 	end
 
 	function gadget:AllowCommand(unitID, unitDefID, teamID, cmdID, cmdParams, cmdOptions, cmdTag, playerID, fromSynced, fromLua)
-		if spGetUnitCommandCount(unitID) == 0 or not cmdOptions.meta then
+		if not cmdOptions.meta or spGetUnitCommandCount(unitID) == 0 then
 			if processCommand(unitID, unitDefID, teamID, cmdID, cmdParams, cmdOptions) then
 				return false --command was used & fully processed, so block command
 			elseif cmdID == CMD_STOP then

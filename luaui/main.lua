@@ -76,7 +76,7 @@ function Update()
   end
   activePage = currentPage
 
-  fontHandler.Update()
+  fontHandler.Update(Spring.GetLastUpdateSeconds())
 
   widgetHandler:Update()
 
