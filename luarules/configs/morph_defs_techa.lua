@@ -743,6 +743,10 @@ local morphDefs = {
 	--Special units morph
 	rumad_meyes = {
 		{
+		into = 'rumad_eyes',
+		time = 5,
+		},
+		{
 		into = 'rumad_spy',
 		time = 30,
 		},
