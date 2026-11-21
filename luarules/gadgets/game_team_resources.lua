@@ -24,15 +24,10 @@ end
 function gadget:Initialize()
 	
 	local modOptions = Spring.GetModOptions() or {}
-	local startMetal  = tonumber(modOptions.startmetal)  or 1000
-	local startEnergy = tonumber(modOptions.startenergy) or 1000
-    if startMetal > 100000000 then
-        startMetal = math.huge
-    end
-    if startEnergy > 100000000 then
-        startEnergy = math.huge
-    end
-    local tea
+	-- Keep high-resource starts finite for engines that reject infinity.
+	local maxStartResources = 1e9
+	local startMetal  = math.min(maxStartResources, tonumber(modOptions.startmetal) or 1000)
+	local startEnergy = math.min(maxStartResources, tonumber(modOptions.startenergy) or 1000)
 	local teamResources = true 
 
 	if ((modOptions.mo_storageowner) and (modOptions.mo_storageowner == "com")) then

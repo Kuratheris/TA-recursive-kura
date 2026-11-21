@@ -65,6 +65,7 @@ local tractorDist = 100 ^ 2 -- default sqr tractor distance, if not found in tab
 if (gadgetHandler:IsSyncedCode()) then
     --------------------------------------------------------------------------------
 
+    local GetUnitCommandCount = VFS.Include('LuaRules/Utilities/GetUnitCommandCount.lua')
     local airbases = {} -- airbaseID = { int pieceNum = unitID reservedFor }
     local pendingLanders = {} -- unitIDs of planes that want repair and are waiting to be assigned airbases
     local landingPlanes = {} -- planes that are in the process of landing on (including flying towards) airbases; [1]=airbaseID, [2]=pieceNum
@@ -250,7 +251,7 @@ if (gadgetHandler:IsSyncedCode()) then
         --
 
         -- if the unit has no orders, tell it to move a little away from the airbase
-        local q = Spring.GetUnitCommandCount(unitID)
+        local q = GetUnitCommandCount(unitID)
         if q == 0 then
             local px, _, pz = Spring.GetUnitPosition(airbaseID)
             local theta = math.random() * 2 * math.pi
